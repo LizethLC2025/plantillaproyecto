@@ -1,0 +1,99 @@
+body {
+  background-color: black;
+  color: #989D9D;
+  font-family: 'Bebas Neue', cursive, 'Segoe UI', sans-serif;
+}
+
+.portafolio-hero {
+  background-color: #BC191A;
+  color: white;
+}
+
+.hero-logo {
+  height: 140px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text {
+  font-size: 1.1rem;
+}
+
+.subtitle {
+  color: #BC191A;
+}
+
+.trabajo-card {
+  background-color: #20222A;
+  border: 1px solid #989D9D;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.trabajo-card img {
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+
+}
+
+.card-usuario {
+  color: #989D9D;
+  margin-bottom: 0.5rem;
+}
+
+.btn-instagram {
+  background-color: #BC191A;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.btn-instagram i {
+  margin-right: 0.5rem;
+}
+
+.btn-instagram:hover {
+  background-color: #a01313;
+}
+.card-descripcion {
+  color: #E0E0E0; /* Gris muy claro, casi blanco */
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0; /* Para que no tenga mucho espacio debajo */
+}
+.trabajo-card img {
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.trabajo-card:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+  cursor: pointer;
+  filter: brightness(1.15);
+}
+.trabajo-card:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 20px rgba(188, 25, 26, 0.5);
+}
+
+.portfolio-section {
+  background: linear-gradient(800deg, rgba(0, 0, 0, 0.95), rgba(51, 52, 52, 0.95));
+  border-radius: 0px;
+  padding: 25px;
+}
+
+
+
+
+

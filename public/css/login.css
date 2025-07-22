@@ -1,0 +1,14 @@
+/* public/css/login.css */
+.login-box {
+    width: 360px;
+    margin: 7% auto;
+}
+
+.login-box-body {
+    background: #fff;
+    padding: 20px;
+    border-top: 0;
+    color: #666;
+    border-radius: 5px; /* Ejemplo: Añadir bordes redondeados */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Ejemplo: Añadir una sombra */
+}

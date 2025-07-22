@@ -1,0 +1,165 @@
+/*
+ * Sección para tus tipografías personalizadas
+ */
+@font-face {
+    font-family: 'AckbarFont'; /* Le he puesto 'AckbarFont' como nombre para tu fuente */
+    src: url('Ackbar.ttf') format('truetype'); /* La ruta es correcta si Ackbar.ttf está directamente en la carpeta css */
+    font-weight: normal; /* Asegúrate que el peso sea el correcto para tu fuente */
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #fbf8df; /* Color de fondo beige claro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 60px 0;
+    background-color: #33544f; /* Verde azulado ligeramente más oscuro para el encabezado */
+}
+.header-logo {
+    height: 60px; /* Este es el valor actual que controla la altura */
+    width: auto; /* Esto mantiene la proporción del logo */
+    /* Otras propiedades si las tienes */
+}
+
+h1 {
+    font-family: 'AckbarFont', sans-serif; /* Aplicando tu tipografía personalizada a "Mis trabajos!" */
+    color: #fbf8df; /* Color del texto del título (beige claro) */
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: #ebddc8; /* Color beige para las tarjetas */
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 700px; /* <--- VALOR AJUSTADO: Hacemos las tarjetas un poco más grandes */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 5px solid #80aba6;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 8px 8px 20px rgba(23, 189, 23, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    height: 500px; /* Altura de la imagen, puedes ajustar si necesitas que las tarjetas sean más cortas/altas */
+    object-fit: cover;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+}
+
+.project-description {
+    padding: 50px; /* Relleno adecuado para el contenido de la descripción */
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-description h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #33544f;
+    font-size: 1.6em;
+    font-family: 'AckbarFont', sans-serif;
+}
+
+.project-description h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #33544f;
+    font-size: 1.1em;
+    font-weight: normal;
+}
+
+.project-description p {
+    color: #141414;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%; /* Asegura que ocupe todo el ancho para que text-align: center funcione */
+}
+
+.btn-more-projects {
+    display: inline-block;
+    background-color: #a1bdab;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-more-projects:hover {
+    background-color: #8da69b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: auto;
+    background-color: #a1bdab;
+    color: #ffffff;
+}
+
+footer p {
+    margin: 0 0 10px 0;
+    font-size: 0.9em;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 2em;
+}
+
+.social-icons a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #33544f;
+    transform: scale(1.1);
+}

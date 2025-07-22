@@ -7,6 +7,8 @@ session_start();
 require_once "../config/global.php";
 
 // Lógica para mostrar mensajes de error desde el controlador
+// Este bloque puede ser removido si solo se usa el manejo de errores por JavaScript.
+// Pero se mantiene como fallback o para mensajes de PHP puros.
 $mensaje_error = false;
 if (isset($_SESSION['login_error'])) {
     $mensaje_error = $_SESSION['login_error'];
@@ -17,7 +19,10 @@ if (isset($_SESSION['login_error'])) {
 // Si el usuario ya tiene una sesión activa (es decir, ya inició sesión),
 // lo redirigimos directamente a la página principal para evitar que vea el formulario de login.
 if (isset($_SESSION['idusuario']) && $_SESSION['idusuario'] > 0) {
-    header("Location: categorias.php"); // Redirige a categorias.php o a tu página principal
+    // Aquí puedes añadir lógica para redirigir a 'categorias.php' si es admin (idrol 1)
+    // O mantener solo 'portafolios_principal.php' si es la página para todos los usuarios logueados.
+    // Considerando que 'categorias.php' no existe, solo redirigimos a 'portafolios_principal.php'.
+    header("Location: portafolios_principal.php");
     exit(); // Es crucial salir para evitar que el resto del código HTML se cargue
 }
 ?>
@@ -32,15 +37,16 @@ if (isset($_SESSION['idusuario']) && $_SESSION['idusuario'] > 0) {
     <link rel="stylesheet" href="../public/css/font-awesome.css">
     <link rel="stylesheet" href="../public/css/AdminLTE.min.css">
     <link rel="stylesheet" href="../public/css/blue.css">
+    <link rel="stylesheet" href="../public/css/login.css">
     <link rel="shortcut icon" href="../public/img/favicon.ico">
-    <link rel="stylesheet" href="../public/css/style_login.css">
 </head>
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
             <a href="#"><b><?php echo PRO_NOMBRE; ?></b></a>
-        </div><div class="login-box-body">
-            <p class="login-box-msg">Ingresa tus datos para iniciar sesión</p>
+        </div>
+        <div class="login-box-body">
+            <p class="login-box-msg">Ingresa tus datos para ver</p>
 
             <?php if ($mensaje_error): ?>
                 <div class="alert alert-danger alert-dismissible">
@@ -61,15 +67,19 @@ if (isset($_SESSION['idusuario']) && $_SESSION['idusuario'] > 0) {
                 </div>
                 <div class="row">
                     <div class="col-xs-8">
-                        </div><div class="col-xs-4">
+                        </div>
+                    <div class="col-xs-4">
                         <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
-                    </div></div>
+                    </div>
+                </div>
             </form>
 
-        </div></div><script src="../public/js/jquery-3.1.1.min.js"></script>
+        </div>
+    </div>
+    <script src="../public/js/jquery-3.1.1.min.js"></script>
     <script src="../public/bootstrap/js/bootstrap.min.js"></script>
     <script src="../public/js/icheck.min.js"></script>
-    <script src="../vistas/js/login.js"></script>
+    <script src="./js/login.js"></script>
     <script>
         // Script para inicializar iCheck (estilo visual de los inputs)
         $(function () {

@@ -16,7 +16,7 @@ if (!isset($_SESSION['idusuario']) || $_SESSION['idusuario'] == 0) {
                         <div class="box-header with-border">
                             <h1 class="boxtittle">¡Bienvenido al Sistema de Ventas!</h1>
                             <p>Has iniciado sesión correctamente. Esta es la página principal de tu aplicación.</p>
-                            <p><a href="vistas/categoria.php">Ir a Categorías</a></p>
+                            <p><a href="vistas/categorias.php">Ir a Categorías</a></p>
                         </div>
                     </div>
                 </div>

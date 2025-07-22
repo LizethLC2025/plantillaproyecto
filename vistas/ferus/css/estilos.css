@@ -1,0 +1,184 @@
+
+        body {
+            background-color: #121212;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;}
+
+        header {
+            background: linear-gradient(135deg, #6c23acff, #4a00e0);
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);}
+
+        .logo {
+            width: 35px;
+            height: 43px;
+            margin-right: 15px;}
+
+        .brand-name {
+            font-size: 1.8em;
+            font-weight: bold;
+            letter-spacing: 1.5px;}
+
+
+        /*BOTON*/
+        .volver-btn {
+            background-color: #4b1977ff;
+            color: white;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            padding: 8px 15px;
+            font-size: 0.95em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;}
+
+        .volver-btn:hover {
+            background-color: #2b0579ff;}
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;}
+
+
+
+        /* TÍTULO */
+        .titulo-container {
+         text-align: center;
+         margin: 30px auto 10px auto;
+         padding: 0 15px;}
+
+.titulo-imagen {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;}
+
+
+
+/* DESCRIPCIÓN FERUS */
+.sobre-ferus {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Antes era 30px */
+    background-color: #5e2e7e38;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 40px auto;}
+
+.descripcion-texto {
+    flex: 2 1 300px; 
+    color: #e0e0e0;}
+
+.descripcion-texto h2 {
+    color: #d4b608ff;
+    margin-bottom: 30px;
+    font-size: 2.2em;}
+
+.descripcion-texto p {
+    font-size: 1.4em;
+    line-height: 1.4;
+    margin-bottom: 10px;}
+
+.imagen-ferus {
+    flex: 1 1 200px; /* Imagen ocupa menos espacio */
+    text-align: center;}
+
+.imagen-ferus img {
+    max-width: 330px;
+    width: 250%;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);}
+
+
+    /*CARTAS*/
+        .card {
+            background-color: #202020ff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(12, 12, 12, 0.3);
+            cursor: pointer;
+            transition: transform 0.2s ease;}
+
+        .card:hover {
+            transform: scale(1.05);}
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;}
+
+        .card-title {
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;} 
+
+
+        /*MODALES*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); 
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #111; /* opcional para darle marco oscuro */
+  padding: 0;
+  border-radius: 12px;
+  max-width: 90%;
+  width: 800px;
+  max-height: 90vh;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  display: block;
+}
+
+
+        /*FOOTER*/
+        footer {
+            background: linear-gradient(135deg, #320f52ff, #22055eff);
+            color: #ccc;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 0.9em;
+            border-top: 1px solid #333;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;}
+
+    footer .redes {
+    margin-top: 10px;
+    font-size: 1.3em;}
+
+footer .redes a {
+    color: #ccc;
+    margin: 0 10px;
+    transition: color 0.3s ease;}
+
+footer .redes a:hover {
+    color: white;}
